@@ -49,5 +49,5 @@ brain-even
 ```
 
 ### GamePlay
-[![asciicast](https://asciinema.org/connect/830270dc-ffc7-4cc9-a491-961e7084fe4d.svg)](https://asciinema.org/connect/830270dc-ffc7-4cc9-a491-961e7084fe4d)
+[![asciicast](https://asciinema.org/a/iSHuDM3urcEDEKsK.svg)](https://asciinema.org/a/iSHuDM3urcEDEKsK)
 
