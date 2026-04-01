@@ -21,4 +21,5 @@ export default (description, questionAndAnswer, isNumber = true) => {
       console.log("Correct!");
     }
   }
+  console.log(`Congratulations, ${name}!`);
 };

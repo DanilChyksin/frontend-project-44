@@ -8,7 +8,7 @@ export default defineConfig(stylistic.configs.recommended, [
     rules: {
       "@stylistic/brace-style": ["error", "stroustrup"],
       "@stylistic/semi": ["error", "always"],
-      "@stylistic/quotes": ["error", "double"],
+      "@stylistic/quotes": ["error", "double", { avoidEscape: true }],
     },
   },
 ]);
