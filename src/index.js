@@ -1,7 +1,7 @@
 import readlineSync from "readline-sync";
 import { startApp } from "./cli.js";
 
-export default (description, questionAndAnswer) => {
+export default (description, questionAndAnswer, isNumber = true) => {
   const name = startApp();
   console.log(description);
 
@@ -9,14 +9,15 @@ export default (description, questionAndAnswer) => {
     const [question, correctAnswer] = questionAndAnswer();
     console.log(question);
     const userAnswer = readlineSync.question("Your answer: ");
-
-    if (correctAnswer !== +userAnswer) {
+    const userAnswerProcessing = isNumber ? Number(userAnswer) : userAnswer;
+    if (correctAnswer !== userAnswerProcessing) {
       console.log(
-        `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`
+        `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`,
       );
       console.log(`Let's try again, ${name}!`);
       return null;
-    } else {
+    }
+    else {
       console.log("Correct!");
     }
   }

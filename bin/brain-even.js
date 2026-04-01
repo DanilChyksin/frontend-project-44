@@ -25,9 +25,10 @@ const brainEvenGame = () => {
     console.log("Is correct");
 
     countWin++;
-  } else {
+  }
+  else {
     console.log(`'${answer}' is wrong answer ;(. Correct answer was '${getOppositeAnswer(
-      answer
+      answer,
     )}'.
       Let's try again, ${name}!`);
     countWin = 0;
@@ -38,7 +39,8 @@ const brainEvenGame = () => {
     const isTryAgain = readLineSync.question("Do you want try again ?");
     if (isTryAgain === "yes" || isTryAgain === "y") {
       brainEvenGame();
-    } else {
+    }
+    else {
       return null;
     }
   }

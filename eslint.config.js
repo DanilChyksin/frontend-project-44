@@ -6,8 +6,9 @@ export default defineConfig(stylistic.configs.recommended, [
     files: ["**/*.{js,mjs,cjs}"],
     languageOptions: { globals: globals.browser },
     rules: {
+      "@stylistic/brace-style": ["error", "stroustrup"],
       "@stylistic/semi": ["error", "always"],
-      "@stylistic/singleQuote": ["error", "always"],
+      "@stylistic/quotes": ["error", "double"],
     },
   },
 ]);

@@ -17,7 +17,7 @@ const calcGame = () => {
   const randomNumberB = getRandomNumber(10);
   const question = `Question: ${randomNumberA} ${randomOperator} ${randomNumberB}`;
   const correctAnswer = currentFunction(randomNumberA, randomNumberB);
-  
+
   return [question, correctAnswer];
 };
 export default () => {
