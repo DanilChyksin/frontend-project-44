@@ -7,8 +7,8 @@ export default defineConfig(stylistic.configs.recommended, [
     languageOptions: { globals: globals.browser },
     rules: {
       "@stylistic/brace-style": ["error", "stroustrup"],
+      "@stylistic/quotes": ["error", "double"],
       "@stylistic/semi": ["error", "always"],
-      "@stylistic/quotes": ["error", "double", { avoidEscape: true }],
     },
   },
 ]);
