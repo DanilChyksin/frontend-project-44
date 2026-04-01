@@ -3,6 +3,8 @@ install:
 
 brain-games:
 	node bin/brain-games.js
+prettier:
+	npx prettier --write .
 
 publish: 
 	npm publish --dry-run
