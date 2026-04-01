@@ -1,12 +1,12 @@
 import { getRandomNumber } from "../cli.js";
 import startGame from "../index.js";
 const description
-  = 'Answer "yes" if the number is even, otherwise answer "no".';
+  = "Answer \"yes\" if the number is even, otherwise answer \"no\".";
 const answerIsCorrect = (number) => {
   return number % 2 === 0 ? "yes" : "no";
 };
 
-console.log('Answer "yes" if the number is even, otherwise answer "no".');
+console.log("Answer \"yes\" if the number is even, otherwise answer \"no\".");
 
 const brainEvenGame = () => {
   const randomNumber = getRandomNumber(100);
