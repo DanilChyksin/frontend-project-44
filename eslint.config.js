@@ -1,14 +1,20 @@
-import globals from "globals";
-import { defineConfig } from "eslint/config";
-import stylistic from "@stylistic/eslint-plugin";
-export default defineConfig(stylistic.configs.recommended, [
+import globals from 'globals'
+import stylistic from '@stylistic/eslint-plugin'
+
+export default [
+  stylistic.configs.recommended,
   {
-    files: ["**/*.{js,mjs,cjs}"],
-    languageOptions: { globals: globals.browser },
+    files: ['**/*.{js,mjs,cjs}'],
+    languageOptions: {
+      globals: {
+        ...globals.node,
+        ...globals.browser,
+      },
+    },
     rules: {
-      "@stylistic/brace-style": ["error", "stroustrup"],
-      "@stylistic/quotes": ["error", "double"],
-      "@stylistic/semi": ["error", "always"],
+      '@stylistic/brace-style': ['error', 'stroustrup'],
+      '@stylistic/quotes': ['error', 'single'],
+      '@stylistic/semi': ['error', 'never'],
     },
   },
-]);
+]
